@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "Shiny Origami",
     "slug": "shinyOrigami-app",
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -17,6 +17,14 @@
     },
     "updates": {
       "fallbackToCacheTimeout": 0
+    },
+    "android": {
+	    "package": "shinyorigami.app",
+    	"config" : {
+	      "googleMobileAdsAppId" : "ca-app-pub-9330146669440542~7966212947"
+        },
+    	"permissions": [],
+	    "versionCode": 2
     },
     "assetBundlePatterns": [
       "**/*"

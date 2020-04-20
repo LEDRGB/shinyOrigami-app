@@ -1,7 +1,5 @@
-// Swipe.js
 import React, { Component } from 'react';
-import { View, Text, PanResponder, Image, Dimensions, Animated } from 'react-native';
-import { Card } from 'react-native-elements';
+import { View, PanResponder, Dimensions, Animated } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SWIPE_THRESHOLD = 0.25 * SCREEN_WIDTH;
@@ -18,7 +16,6 @@ class Swipe extends Component {
         this.state = { index: 0 };
         this.position = new Animated.ValueXY();
         this._panResponder = PanResponder.create({
-            // Ask to be the responder:
             onStartShouldSetPanResponder: (evt, gestureState) => true,
             onPanResponderMove: (evt, gesture) => {
                 this.position.setValue({ x: gesture.dx, y: gesture.dy });
@@ -68,10 +65,6 @@ class Swipe extends Component {
       }
     
       renderCards = () => {
-        // if (this.state.index >= this.props.data.length) {
-        //   return this.props.renderNoMoreCards();
-        // }
-        console.log(this.props.data, this.props.foldIndex)
         return (
             <Animated.View
             key={this.props.foldIndex}
